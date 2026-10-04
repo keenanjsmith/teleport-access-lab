@@ -1,0 +1,11 @@
+# Never upload certificates or private keys
+*.pem
+*.key
+*.crt
+*.cas
+
+# Never upload VM disks or installer images
+*.iso
+*.vdi
+*.vbox
+*.vbox-prev
