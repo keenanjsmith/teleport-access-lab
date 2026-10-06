@@ -123,6 +123,18 @@ The full story is in the [build log](BUILD-LOG.md). The three that taught the mo
 
 ---
 
+## How I Used AI
+
+I built this with Claude as a working partner. It drafted the plan and the runbooks, and I ran every step myself on real VMs. When a step was wrong or missing, I fixed it live and folded the fix back into the runbook before moving on.
+
+A few things the AI got wrong that only showed up by actually running it:
+
+- The first runbook skipped several Ubuntu installer screens, so I had to work through them and add each one.
+- It sized tp-proxy at 2 GB of memory. That caused three freezes in one evening, and one of them cost me a session recording, until I raised it to 4 GB.
+- Its first method for giving each cloned VM its own address kept timing out. Setting the final address in the VM console first, then connecting straight to it, is what worked.
+
+---
+
 ## Rebuild It Yourself
 
 The runbooks are written for someone who has never used Linux. Every step says which window to use, repeats every value it needs, and flags where to take screenshots.
